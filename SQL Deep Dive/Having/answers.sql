@@ -23,7 +23,7 @@ JOIN salaries as s USING(emp_no)
 JOIN dept_emp AS de USING(emp_no)
 WHERE de.dept_no = 'd005'
 GROUP BY e.emp_no
-HAVING count(s.from_date) > 15
+HAVING count(s.from_date) > 15+1
 ORDER BY e.emp_no;
 
 /*
